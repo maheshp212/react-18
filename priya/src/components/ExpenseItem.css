@@ -1,0 +1,33 @@
+.expense-item{
+  padding: 5px 10px;
+  border: 2px solid grey;
+  height: 90px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.expense-item__date{
+  float: left;
+  width: 15%;
+}
+.expense-item__description{
+  float: left;
+
+  margin-top: 25px;
+  width: 85%;
+}
+.expense-item__name{
+  float: left;
+  width: 70%;
+  color: white;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.expense-item__amount{
+  float: right;
+  text-align: right;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
+
+}
