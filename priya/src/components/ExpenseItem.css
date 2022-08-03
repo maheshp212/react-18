@@ -1,9 +1,9 @@
 .expense-item{
   padding: 5px 10px;
-  border: 2px solid grey;
   height: 90px;
   margin: 10px;
   border-radius: 10px;
+  background-color: #c7b2da;
 }
 .expense-item__date{
   float: left;
