@@ -1,5 +1,5 @@
 import './App.css';
-import Expenses from './components/Expenses'
+import Expenses from './components/expenses/Expenses'
 function App() {
   // JSX - Java Script XML
   const expenseList = [
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h2> This is React App...</h2>
-      <Expenses items={expenseList} />
+      <Expenses items={expenseList} > </Expenses>
     </div>
   );
 }
