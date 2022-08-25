@@ -1,6 +1,7 @@
 import './App.css';
 import Expenses from './components/expenses/Expenses'
-function App() {
+import NewExpense from './components/NewExpense/NewExpense';
+const App = ()=> {
   // JSX - Java Script XML
   const expenseList = [
     { title: 'new Tv', amount: 4000, date: new Date(2022,6,23)},
@@ -12,7 +13,8 @@ function App() {
   ]
   return (
     <div className="App">
-      <h2> This is React App...</h2>
+      <h2>Expenses</h2>
+      <NewExpense/>
       <Expenses items={expenseList} > </Expenses>
     </div>
   );
