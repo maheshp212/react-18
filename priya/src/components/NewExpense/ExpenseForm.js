@@ -46,7 +46,8 @@ const ExpenseForm = (props)=>{
         setEnteredAmount('');
         setEnteredDate('');
 
-        console.log(expenseData);
+        props.onSaveExpensesData(expenseData);
+
     }
     return <form onSubmit={submitHandler}>
         <div>
