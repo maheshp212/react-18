@@ -1,0 +1,10 @@
+.invalid{
+    color:red;
+    background-color: yellow;
+}
+.form-control{
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+}
+/*  */
