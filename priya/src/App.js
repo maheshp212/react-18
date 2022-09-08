@@ -1,29 +1,47 @@
 import './App.css';
-import Expenses from './components/expenses/Expenses'
-import NewExpense from './components/NewExpense/NewExpense';
-import { useState } from 'react';
-
+import NavHeader from './components/NavHeader';
+import Welcome from './components/Welcome';
+import Products from './components/Products';
+import ProductDetails from './components/ProductDetails';
+import Quotes from './components/Quotes';
+import NotFound from './components/NotFound';
+import {Redirect, Route, Switch} from 'react-router-dom';
 const App = ()=> {
   // JSX - Java Script XML
-  const expenseList = [
-    { title: 'new Tv', amount: 4000, date: new Date(2022,6,23)},
-    { title: 'Sofa', amount: 2100, date: new Date(2021,7,15)},
-    { title: 'AC', amount: 3500, date: new Date(2022,3,19)},
-    { title: 'Vaccum', amount: 200, date: new Date(2019,1,12)},
-    { title: 'Fridge', amount: 4400, date: new Date(2019,8,5)},
-    { title: 'Home Decor', amount: 30, date: new Date(2018,3,1)},
-  ];
-
-  const [expenses, setExpenses] = useState(expenseList);
-
-  const addExpenseHandler = (newItem) => {
-    setExpenses((prevState)=>{ return [...prevState, newItem]})
-  }
   return (
     <div className="App">
-      <h2>Expenses</h2>
-      <NewExpense onAddExpense = {addExpenseHandler}/>
-      <Expenses items={expenses} > </Expenses>
+      <NavHeader />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
+          <Route path="/welcome">
+            <Welcome/>
+          </Route>
+          <Route path="/quotes">
+          <Redirect to="/quoting" />
+          </Route>
+          <Route path="/quoting">
+            <Quotes/>
+          </Route>
+          <Route path="/products" exact>
+            <Products/>
+          </Route>
+          
+          <Route path="/products/:productId">
+            <ProductDetails/>
+          </Route>
+          
+          <Route path="*">
+            <NotFound/>
+          </Route>
+          
+          
+        </Switch>
+
+      </main>
+
     </div>
   );
 }

@@ -1,0 +1,26 @@
+nav{
+    background-color :#9c27b0;
+    height : 30px;
+}
+ul{
+    margin: 0;
+}
+li{
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+li a{
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+li a:hover {
+    text-decoration: underline;
+}
+li a.active {
+    text-decoration: underline;
+    background-color: #c7b2da;
+}
