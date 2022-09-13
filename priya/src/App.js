@@ -6,6 +6,7 @@ import ProductDetails from './components/ProductDetails';
 import Quotes from './components/Quotes';
 import NotFound from './components/NotFound';
 import {Redirect, Route, Switch} from 'react-router-dom';
+import FormValidations from './components/FormValidations';
 const App = ()=> {
   // JSX - Java Script XML
   return (
@@ -31,6 +32,9 @@ const App = ()=> {
           
           <Route path="/products/:productId">
             <ProductDetails/>
+          </Route>
+          <Route path="/form-validations">
+            <FormValidations/>
           </Route>
           
           <Route path="*">

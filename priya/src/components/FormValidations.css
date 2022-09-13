@@ -1,0 +1,17 @@
+.form-validation{
+    margin: 10px 50px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}
+.error{
+    color:red;
+}
+.form-control{
+    width: 100%;
+}
