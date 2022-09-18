@@ -7,6 +7,8 @@ import Quotes from './components/Quotes';
 import NotFound from './components/NotFound';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import FormValidations from './components/FormValidations';
+import Swapi from './components/Swapi';
+import Users from './components/Users';
 const App = ()=> {
   // JSX - Java Script XML
   return (
@@ -35,6 +37,12 @@ const App = ()=> {
           </Route>
           <Route path="/form-validations">
             <FormValidations/>
+          </Route>
+          <Route path="/swapi">
+            <Swapi/>
+          </Route>
+          <Route path="/users">
+            <Users/>
           </Route>
           
           <Route path="*">
