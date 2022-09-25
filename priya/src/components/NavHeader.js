@@ -10,6 +10,7 @@ const NavHeader = ()=>{
             <li> <NavLink to="/form-validations" activeClassName='active'> Form Validations</NavLink></li>
             <li> <NavLink to="/swapi" activeClassName='active'> swapi</NavLink></li>
             <li> <NavLink to="/users" activeClassName='active'> users api</NavLink></li>
+            <li> <NavLink to="/redux" activeClassName='active'> Redux</NavLink></li>
         </ul>
     </nav>
 }

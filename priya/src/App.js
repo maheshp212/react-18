@@ -9,6 +9,7 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import FormValidations from './components/FormValidations';
 import Swapi from './components/Swapi';
 import Users from './components/Users';
+import Redux from './components/redux';
 const App = ()=> {
   // JSX - Java Script XML
   return (
@@ -43,6 +44,9 @@ const App = ()=> {
           </Route>
           <Route path="/users">
             <Users/>
+          </Route>
+          <Route path="/redux">
+            <Redux/>
           </Route>
           
           <Route path="*">
