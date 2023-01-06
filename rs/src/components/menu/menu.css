@@ -1,0 +1,20 @@
+nav{
+    clear:both;
+    height: 48px;
+    background-color: #EDAA25;
+}
+ul{
+    margin:0;
+}
+li{
+    list-style-type: none;;
+    float: left;
+    margin: 0;
+    margin: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
