@@ -1,0 +1,27 @@
+.expense-item {
+    background-color: #C85C8E;
+    height: 57px;
+    padding: 7px;
+    border-radius: 9px;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.expense-name {
+    width: 70%;
+    float: left;
+    margin-top: 15px;
+}
+
+.expense-amount {
+    background-color: #7B2869;
+    border-radius: 9px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px;
+    width: 8%;
+    float: left;
+}
