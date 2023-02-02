@@ -3,6 +3,7 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import MainComponent from './components/main/main';
 import Menu from './components/menu/menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   let name = "maheshssssssssssss";
   return (

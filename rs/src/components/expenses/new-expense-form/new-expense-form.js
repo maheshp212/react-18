@@ -1,5 +1,6 @@
 import './new-expense-form.css';
 import { useState } from 'react';
+import styled from 'styled-components';
 const NewExpenseForm = (props) =>{
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
@@ -27,7 +28,16 @@ const NewExpenseForm = (props) =>{
     setDate('');
     setName('');
   }
-    return(<div className="new-expense-form">
+
+  const ExpenseForm = styled.div`
+  background-color: #c85c8e;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  `
+    return(<ExpenseForm>
       <form onSubmit={buttonHandler}>
         <div>
           <label>Name</label>
@@ -45,7 +55,7 @@ const NewExpenseForm = (props) =>{
           <button >Create</button>
         </div>
         </form>
-    </div>)
+    </ExpenseForm>)
 }
 
 export default NewExpenseForm;
