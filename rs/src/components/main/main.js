@@ -28,7 +28,7 @@ const MainComponent = () => {
       <Routes>
         <Route path="/home" element={<Home/>}/>
         <Route path="/forms" element={<Form/>}/>
-        <Route path="/apis" element={<Apis/>}/>
+        <Route path="/api" element={<Apis/>}/>
         <Route path="/redux" element={<Redux/>}/>
         <Route path="/expenses" element={<Expenses/>}/>
       </Routes>

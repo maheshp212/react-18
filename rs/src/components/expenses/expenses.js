@@ -2,9 +2,10 @@ import { useState } from 'react';
 import ExpenseFilter from './expense-filter/expense-filter';
 import ExpenseItem from './expense-item/expense-item';
 import './expenses.css'
+import NewExpenseForm from './new-expense-form/new-expense-form';
 const  Expenses = ()=>{
     //use state;
-    const expensesList = [
+    let data = [
         {date: new Date('2023-10-12'), name: 'Car Insurance', amount: 3000},
         {date: new Date('2022-10-12'), name: 'Bike Insurance', amount: 500},
         {date: new Date('2021-10-12'), name: 'Lorry Insurance', amount: 1000},
@@ -12,10 +13,11 @@ const  Expenses = ()=>{
         {date: new Date('2023-10-13'), name: 'clothes', amount: 2300},
         {date: new Date('2023-11-15'), name: 'Kirana', amount: 700},
         {date: new Date('2021-09-12'), name: 'Fuel', amount: 2000},
-    ];
+    ]
+    const [expensesList, setExpensesList] = useState(data);
 
     const [filterYear, setFilterYear] = useState("");
-    const [filteredList, setFilteredList] = useState(expensesList);
+    const [filteredList, setFilteredList] = useState(data);
 
     const changeFilterHander = (year) =>{
         setFilterYear(year);
@@ -28,10 +30,23 @@ const  Expenses = ()=>{
             setFilteredList(list);
         }
     }
+
+    const newRecord = (obj)=>{
+        console.log(obj);
+        setExpensesList((prevState)=>{
+            return [...prevState, obj]
+        });
+        setFilteredList((prevState)=>{
+            return [...prevState, obj]
+        });
+        
+
+    }
     
     return (
     <div className='expense-container'>
         <h2> Im Expenses</h2>
+        <NewExpenseForm onCreate={newRecord}></NewExpenseForm>
         <ExpenseFilter filterYear={filterYear} onChangeFilter={changeFilterHander}/>
         {filteredList.map((expense, index)=>{
             return (        
