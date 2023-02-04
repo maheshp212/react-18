@@ -20,6 +20,7 @@ const Apis = () =>{
     useEffect(()=>{
         fetchUsers();//inital loading
     },[]);
+    
     const fetchUsers= ()=>{
         setIsLoading(true);
         let url = 'https://gorest.co.in/public/v2/users';
