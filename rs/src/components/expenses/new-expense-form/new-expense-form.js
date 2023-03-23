@@ -53,6 +53,14 @@ const nameValidHandler = ()=>{
     
   }
 
+  const cancelHandler = (e) =>{
+
+    //resetting values to empty
+    setAmount('');
+    setDate('');
+    setName('');
+  }
+
   const ExpenseForm = styled.div`
   background-color: #c85c8e;
   padding: 10px;
@@ -83,6 +91,22 @@ const nameValidHandler = ()=>{
           <input type="date" name="date" value={date} onChange={dateHandler} />
         </div>
         <div>
+          <label>Job Title</label>
+          <select>
+            <option value="Engineer"> Engineer</option>
+            <option value="Doctor"> Doctor</option>
+            <option value="Lawyer"> Lawyer</option>
+            <option value="Developer"> Developer</option>
+            <option value="Electrician"> Electrician</option>
+            <option value="plumber"> Plumber</option>
+            <option value="Driver"> driver</option>
+            <option value="Business Man"> Business Man</option>
+            <option value="judge"> Judge</option>
+            <option value="carpenter"> carpenter</option>
+          </select>
+        </div>
+        <div>
+          <input type="button" value ="cancel" onClick={cancelHandler} />
           <button >Create</button>
         </div>
         </form>

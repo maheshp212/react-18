@@ -1,7 +1,8 @@
 const NotFound = () =>{
+    var name = "mahesh0"
     return (
         <div>
-            page not found
+            page not found -- {name}
         </div>
     )
 }

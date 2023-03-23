@@ -1,0 +1,36 @@
+import React from "react";
+
+// use these stars (html): "&#9733;", "&#9734;"
+
+const Rating = ({ name, rate, content }) => {
+    return <div className="ratings__item">
+    <Stars rate={rate} />
+    <h3>{name} </h3>
+    <p>{content}</p></div>;
+};
+
+const Stars = ({rate}) =>{
+    return <> {Array(rate).fill(null).map(()=> <span>&#9733;</span>)}
+    {Array(5-rate).fill(null).map(()=> <span>&#9734;</span>)} </>
+}
+
+
+const AverageRating = ({ ratings }) => {
+    let sum = 0
+    ratings.forEach(rating => {sum += rating.rate})
+    let avg = Math.ceil(sum/ratings.length)
+    return <div className="ratings__average">
+    <Stars rate={avg} />
+    </div>;
+};
+
+const RatingsList = ({ ratings }) => {
+    return <div className="ratings">
+        <AverageRating ratings = {ratings} />
+        {ratings.map((rating, index) => <Rating key={`rating-${index}`}  name={rating.name} rate={rating.rate} content={rating.content}/>)}
+    </div>;
+};
+
+export { Rating, AverageRating };
+
+export default RatingsList;
