@@ -1,0 +1,22 @@
+.expense-item{
+    display:  flex;
+    background-color: #be1ebe;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    border-color: #834083;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+.expense-name{
+    width: 70%;
+}
+.expense-date{
+    width: 20%;
+}
+.expense-amount{
+    width: 10%;
+}
