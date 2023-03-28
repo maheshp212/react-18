@@ -1,0 +1,23 @@
+.new-expense{
+    display: flex;
+    justify-content: center;
+}
+.form{
+ width: 50%;
+ text-align: center;
+ background-color: #834083;
+ padding: 2%;
+ border-radius: 15px;
+}
+.form-item{
+    padding: 5px;
+    margin: 10px;
+}
+
+input, button{
+    width: 100%;
+    height: 30px;
+}
+h2{
+    color: white;
+}
