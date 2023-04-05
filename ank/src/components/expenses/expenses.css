@@ -20,3 +20,10 @@
 .expense-amount{
     width: 10%;
 }
+.expense-list-container{
+    display: flex;
+    justify-content: center;
+}
+.expense-list{
+ width: 80%;
+}

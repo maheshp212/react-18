@@ -6,12 +6,17 @@ function NewExpense(props){
     const [amount, setAmount] = useState('');
     const [day, setDay] = useState('');
 
+    // this will change the value of the `name` variable
     const nameHandler = (event) =>{
-        setName(event.target.value)
+        // name = event.target.value;// this line will not re-load the template
+        setName(event.target.value) // this will re-load the template with new/ updated varibale values 
     }
+    // this will change the value of the `day` variable
     const dayHandler = (event) =>{
         setDay(event.target.value)
     }
+
+    // this will change the value of the `amount` variable
     const amountHandler = (event) =>{
         setAmount(event.target.value)
     }
@@ -22,6 +27,8 @@ function NewExpense(props){
             amount: amount,
             date: day
         }
+
+        // passing data from child to parent
         props.onCreate(obj);
         cancelHandler();
     }
@@ -45,3 +52,8 @@ function NewExpense(props){
 }
 
 export default NewExpense
+
+// onclick 
+// (click)
+// onClick
+// useState()

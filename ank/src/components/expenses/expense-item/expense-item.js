@@ -1,8 +1,8 @@
-function ExpenseItem (props){
+function ExpenseItem (p){
     return <div className='expense-item'>
-    <div className='expense-name'>{props.item.name}**</div>
-    <div className='expense-date'>{props.item.date}</div>
-    <div className='expense-amount'>{props.item.amount}</div>
+    <div className='expense-name'>{p.item.name}**</div>
+    <div className='expense-date'>{p.item.date}</div>
+    <div className='expense-amount'>{p.item.amount}</div>
 </div>
 }
 export default ExpenseItem;

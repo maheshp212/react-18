@@ -4,6 +4,7 @@ import Home from '../home/home';
 import Intro from '../intro/intro';
 import Variables from '../variables/variables';
 import './main.css';
+import Apis from '../apis/apis';
 function Main(){
     return(<main>
 
@@ -12,6 +13,7 @@ function Main(){
             <Route path="/intro" element={<Intro/>} />
             <Route path="/var" element={<Variables/>} />
             <Route path="/expenses" element={<Expenses/>} />
+            <Route path="/apis" element={<Apis/>} />
         </Routes>
       </main>)
 }
