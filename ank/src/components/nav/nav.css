@@ -18,3 +18,7 @@ nav{
     background-color: #BFACE2;
    }
   
+ .active{
+  text-decoration: underline;
+    background-color: #BFACE2;
+}

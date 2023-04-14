@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Apis (){
     const [users, setUsers] = useState([])
@@ -24,6 +25,56 @@ function Apis (){
         })
     }
 
+    const viewUser = (id) =>{
+        let url = 'https://gorest.co.in/public/v2/users/'+id;
+        let headers = {
+            headers:{
+                'Authorization' : 'Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce'
+            }
+        }
+        axios.get(url, headers)
+        .then(resp =>{
+            console.log('user API Data');
+            console.log(resp)
+        })
+    }
+
+    const editUser = (id) =>{
+        let url = 'https://gorest.co.in/public/v2/users/'+id;
+        let headers = {
+            headers:{
+                'Authorization' : 'Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce'
+            }
+        }
+        let user = {
+            id: id,
+            name :' kalavya Mahajan',
+            email:'kalavyaMahajan2@gmail.com',
+            gender: 'female',
+            status: 'active'
+        }
+        axios.put(url, user,  headers)
+        .then(resp =>{
+            console.log('user API update Data');
+            console.log(resp)
+            fetchUsers()
+        })
+    }
+    const deleteUser = (id) =>{
+        let url = 'https://gorest.co.in/public/v2/users/'+id;
+        let headers = {
+            headers:{
+                'Authorization' : 'Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce'
+            }
+        }
+        axios.delete(url,  headers)
+        .then(resp =>{
+            console.log('user API delete Data');
+            console.log(resp)
+            fetchUsers()
+        })
+
+    }
     const createUser = () =>{
         let url = 'https://gorest.co.in/public/v2/users'
         let user = {
@@ -54,6 +105,7 @@ function Apis (){
                         <th>Email</th>
                         <th>Gender</th>
                         <th>Status</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,6 +116,13 @@ function Apis (){
                     <td>{user.email}</td>
                     <td>{user.gender}</td>
                     <td>{user.status}</td>
+                    <td>
+                        <span onClick={() => viewUser(user.id)}>View </span>
+                        <p onClick={() => editUser(user.id)}>Edit</p>
+                        <button onClick={() => deleteUser(user.id)}> Delete</button>
+
+                        <NavLink activeClassName="active" to={'/user/' +user.id}>Go to User Page </NavLink>
+                    </td>
                     </tr>
             })}
                 </tbody>
