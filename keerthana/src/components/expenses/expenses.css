@@ -1,0 +1,19 @@
+.expenses-list{
+    width: 100%;
+}
+.expenses-row{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.expenses-col{
+    padding: 10px;
+}
+.name{
+    width: 60%;
+}
+.date{
+    width: 20%;
+}
+.amount {
+    width: 20%
+}
