@@ -1,0 +1,43 @@
+header {
+  background-color: #12368a;
+}
+
+header h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+nav {
+  background-color: #274b9082;
+  display: flex;
+  padding: 15px;
+}
+
+nav .nav-item a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav .nav-item a:hover {
+  background-color: #12368a;
+  text-decoration: underline;
+  color: white;
+  border-radius: 10px;
+}
+
+main {
+  background-color: #E9F8F9;
+  min-height: 650px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #12368a;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  color: white;
+}
