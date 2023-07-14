@@ -9,8 +9,8 @@ function ExpensesList(props) {
         <div className="expense-date">Date</div>
         <div className="expense-amount">Amount</div>
       </div>
-      {props.data.map((item) => {
-        return <ExpensesItem eitem={item} />;
+      {props.data.map((item, index) => {
+        return <ExpensesItem key={'item-'+index} item={item} />;
       })}
     </div>
   );

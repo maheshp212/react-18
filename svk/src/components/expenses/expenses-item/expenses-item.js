@@ -1,8 +1,8 @@
 function ExpensesItem(props){
     return <div className='expense-item'>
-    <div className='expense-name'>{props.eitem?.name}</div>
-    <div className='expense-date'>{props.eitem?.date}</div>
-    <div className='expense-amount'>{props.eitem?.amount}</div>
+    <div className='expense-name'>{props.item?.name}</div>
+    <div className='expense-date'>{props.item?.date}</div>
+    <div className='expense-amount'>{props.item?.amount}</div>
 </div>
 }
 
