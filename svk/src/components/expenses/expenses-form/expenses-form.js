@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './expenses-form.css';
 function ExpensesForm(props){
-    const [name, setName] = useState(''); 
+    const [name, setName] = useState('SVK'); 
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
 
