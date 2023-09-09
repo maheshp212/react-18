@@ -1,0 +1,16 @@
+nav {
+    background-color: #F6635C;
+    display: flex;
+    padding: 15px;
+    gap:5px
+  }
+  nav a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    padding: 10px;
+  }
+  nav a:hover{
+    background-color:#79155B ;
+    border-radius: 5px;
+  }
