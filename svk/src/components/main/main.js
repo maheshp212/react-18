@@ -4,6 +4,7 @@ import Home from '../home/home';
 import Intro from '../intro/intro';
 import Variables from '../variables/variables';
 import Expenses from '../expenses/expenses';
+import Apis from '../apis/apis';
 
 function Main(){
     return  <div className="container">
@@ -12,6 +13,7 @@ function Main(){
       <Route path='/intro' element={<Intro/>}/>
       <Route path='/varrrrrrrrrrrrrr' element={<Variables/>}/>
       <Route path='/expenses' element={<Expenses/>}/>
+      <Route path='/apis' element={<Apis/>}/>
     </Routes>
   </div>
 
