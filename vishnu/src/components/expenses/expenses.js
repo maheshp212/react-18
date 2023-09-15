@@ -1,3 +1,4 @@
+import Expenseslist from "./expenses-list/expenses-list";
 import "./expenses.css";
 function Expenses() {
   let data = [
@@ -12,64 +13,52 @@ function Expenses() {
   ];
   return (
     <div>
-      <div className="expenses-list">
-        <div className="expense-item header">
-          <div className="expense-name">Name</div>
-          <div className="expense-date">Date</div>
-          <div className="expense-amount">Amount</div>
-        </div>
+      Form 
+      Filter
+      <Expenseslist list= {data}/>
 
-        {data.length &&
-          data.map((item) => {
-            return (
-              <div className="expense-item">
-                <div className="expense-name">{item.name}</div>
-                <div className="expense-date">{item.date}</div>
-                <div className="expense-amount">Rs. {item.amount}</div>
-              </div>
-            );
-          })}
-        {/* <div className="expense-item">
-          <div className="expense-name">{data[0].name}</div>
-          <div className="expense-date">{data[0].date}</div>
-          <div className="expense-amount">{data[0].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[1].name}</div>
-          <div className="expense-date">{data[1].date}</div>
-          <div className="expense-amount">{data[1].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[2].name}</div>
-          <div className="expense-date">{data[2].date}</div>
-          <div className="expense-amount">{data[2].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[3].name}</div>
-          <div className="expense-date">{data[3].date}</div>
-          <div className="expense-amount">{data[3].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[4].name}</div>
-          <div className="expense-date">{data[4].date}</div>
-          <div className="expense-amount">{data[4].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[5].name}</div>
-          <div className="expense-date">{data[5].date}</div>
-          <div className="expense-amount">{data[5].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[6].name}</div>
-          <div className="expense-date">{data[6].date}</div>
-          <div className="expense-amount">{data[6].amount}</div>
-        </div>
-        <div className="expense-item">
-          <div className="expense-name">{data[7].name}</div>
-          <div className="expense-date">{data[7].date}</div>
-          <div className="expense-amount">Rs. {data[7].amount}</div>
-        </div> */}
-      </div>
+
+
+       {/* <div className="expense-item">
+      <div className="expense-name">{data[0].name}</div>
+      <div className="expense-date">{data[0].date}</div>
+      <div className="expense-amount">{data[0].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[1].name}</div>
+      <div className="expense-date">{data[1].date}</div>
+      <div className="expense-amount">{data[1].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[2].name}</div>
+      <div className="expense-date">{data[2].date}</div>
+      <div className="expense-amount">{data[2].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[3].name}</div>
+      <div className="expense-date">{data[3].date}</div>
+      <div className="expense-amount">{data[3].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[4].name}</div>
+      <div className="expense-date">{data[4].date}</div>
+      <div className="expense-amount">{data[4].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[5].name}</div>
+      <div className="expense-date">{data[5].date}</div>
+      <div className="expense-amount">{data[5].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[6].name}</div>
+      <div className="expense-date">{data[6].date}</div>
+      <div className="expense-amount">{data[6].amount}</div>
+    </div>
+    <div className="expense-item">
+      <div className="expense-name">{data[7].name}</div>
+      <div className="expense-date">{data[7].date}</div>
+      <div className="expense-amount">Rs. {data[7].amount}</div>
+    </div> */}
     </div>
   );
 }
