@@ -1,3 +1,5 @@
+import { useState } from "react";
+import ExpenseForm from "./expense-form/expense-form";
 import Expenseslist from "./expenses-list/expenses-list";
 import "./expenses.css";
 function Expenses() {
@@ -11,11 +13,17 @@ function Expenses() {
     { date: "2021-03-18", name: "Rent", amount: 35000 },
     { date: "2021-12-16", name: "Furniture", amount: 55000 },
   ];
+
+  const [list, setList] = useState(data);
+
+  const newExpenseHandler = (obj) =>{
+    setList((prevObj) => {return [...prevObj, obj]})
+
+  }
   return (
     <div>
-      Form 
-      Filter
-      <Expenseslist list= {data}/>
+      <ExpenseForm onNewExense={newExpenseHandler} />
+      <Expenseslist list= {list}/>
 
 
 

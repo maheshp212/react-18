@@ -9,8 +9,8 @@ function Expenseslist(props) {
         <ExpenseItem isHeader={true} item={headerData}/>
 
         {props.list.length &&
-          props.list.map((item) => {
-            return <ExpenseItem item={item} />;
+          props.list.map((item,index) => {
+            return <ExpenseItem item={item} key={`list-`+index} />;
           })}
       </div>
     </div>
