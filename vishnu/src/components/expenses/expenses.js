@@ -2,6 +2,7 @@ import { useState } from "react";
 import ExpenseForm from "./expense-form/expense-form";
 import Expenseslist from "./expenses-list/expenses-list";
 import "./expenses.css";
+import ExpenseFilter from "./expense-filter/expense-filter";
 function Expenses() {
   let data = [
     { date: "2023-03-22", name: "Car Insurance", amount: 5000 },
@@ -14,16 +15,42 @@ function Expenses() {
     { date: "2021-12-16", name: "Furniture", amount: 55000 },
   ];
 
-  const [list, setList] = useState(data);
+  const [list, setList] = useState(data); // main & full data
+  const [filteredList, setFilteredList] = useState(data); // filtered data
 
   const newExpenseHandler = (obj) =>{
     setList((prevObj) => {return [...prevObj, obj]})
+    setFilteredList((prevObj) => {return [...prevObj, obj]})
 
   }
+
+  const changeFilter = (year) =>{
+    console.log(year);
+    if(year === 'all'){
+      setFilteredList(list);
+    } else {
+      let partData = list.filter((item)=>{
+        let date = new Date(item.date);
+        return (date.getFullYear() == year);
+      });
+      setFilteredList(partData);
+    }
+  }
+
+  const deleteItemHandler = (id) =>{
+    let items = [...list]
+    items.splice(id,1); // it will remove one item from array
+    setList(items);
+    setFilteredList(items);
+  }
+
   return (
     <div>
       <ExpenseForm onNewExense={newExpenseHandler} />
-      <Expenseslist list= {list}/>
+      <ExpenseFilter onChangeFilter={changeFilter} />
+      <Expenseslist 
+        list= {filteredList}
+        onDeleteItem={deleteItemHandler}/>
 
 
 

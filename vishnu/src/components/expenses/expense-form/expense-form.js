@@ -21,7 +21,7 @@ function ExpenseForm(props){
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
 
-    const nameHandler = (event)=>{
+    const nameHandlersxxxxxxxxxxxxx = (event)=>{
         //name = event.target.value;
         setName(event.target.value);
     }
@@ -52,7 +52,7 @@ function ExpenseForm(props){
     return (<div className="expense-form">
         <div className="form">
             <h2> Add New Expense</h2>
-            `<div className="form-item"> <input type="text" placeholder="Name" value={name} onChange={nameHandler} /></div>`
+            `<div className="form-item"> <input type="text" placeholder="Name" value={name} onChange={nameHandlersxxxxxxxxxxxxx} /></div>`
             <div className="form-item"> <input type="number" placeholder="Amount" value={amount} onChange={amountHandler} /></div>
             <div className="form-item"> <input type="date" value={date} onChange={dateHandler} /></div>
             <div className="form-item"> <button onClick={createHandler}> Create Expense </button></div>
