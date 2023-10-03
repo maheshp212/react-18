@@ -12,7 +12,7 @@ function Apis(){
 
     const [users, setUsers] = useState([]);
     const getUsers  = () =>{
-        let url = 'https://gorest.co.in/public/v2/usersasdf';
+        let url = 'https://gorest.co.in/public/v2/users';
         
         fetch(url)
         .then(data => data.json())
