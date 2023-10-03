@@ -1,0 +1,23 @@
+.grid{
+    display: flex;
+    background-color: #e2b2d2;
+    margin: 10px;
+}
+.header{
+    font-weight: bold;
+}
+.name{
+    width: 30%;
+}
+.email{
+    width: 30%;
+}
+.gender{
+    width: 10%;
+}
+.status{
+    width: 10%;
+}
+.actions{
+    width: 10%;
+}

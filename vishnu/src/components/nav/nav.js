@@ -8,6 +8,7 @@ function Nav(){
         <div><Link to="/intro"> Intro </Link></div>
         <div><Link to="/var"> Variables </Link></div>
         <div><Link to="/expenses"> Expenses </Link></div>
+        <div><Link to="/apis"> API's </Link></div>
       </nav>)
 
 }

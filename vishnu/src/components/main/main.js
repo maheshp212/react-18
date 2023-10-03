@@ -6,6 +6,7 @@ import Intro from "../intro/intro"
 import Var from "../var/var"
 import Notfound from "../notfound/notfound"
 import Expenses from "../expenses/expenses"
+import Apis from "../apis/apis"
 function Main(){
 
     return (<main>
@@ -14,6 +15,7 @@ function Main(){
             <Route path="intro" element={<Intro/>} />
             <Route path="var" element={<Var/>} />
             <Route path="expenses" element={<Expenses/>} />
+            <Route path="apis" element={<Apis/>} />
             <Route path="*" element={<Notfound/>} />
         </Routes>
     </main>)
