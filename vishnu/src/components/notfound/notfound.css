@@ -1,0 +1,19 @@
+
+.not-container{
+    text-align: center;
+}
+.title{
+margin-top: 20%;
+margin-bottom: 10px;
+font-size: 50px;
+color: #79155bb0;
+font-weight: bold;
+font-style: italic;}
+.not-container button{
+    width: 120px;
+}
+
+.not-container button a{
+    color: white;
+    text-decoration: none;
+}

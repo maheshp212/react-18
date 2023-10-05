@@ -7,12 +7,14 @@ import Var from "../var/var"
 import Notfound from "../notfound/notfound"
 import Expenses from "../expenses/expenses"
 import Apis from "../apis/apis"
+import Dynamic from "../dynamic/dynamic"
 function Main(){
 
     return (<main>
         <Routes>
-            <Route path="home" element={<Home/>} />
-            <Route path="intro" element={<Intro/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="intro/:name/:id" element={<Intro/>} />
+            <Route path=":pname/p/:pid" element={<Dynamic/>} />
             <Route path="var" element={<Var/>} />
             <Route path="expenses" element={<Expenses/>} />
             <Route path="apis" element={<Apis/>} />

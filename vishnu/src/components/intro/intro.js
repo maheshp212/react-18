@@ -1,5 +1,8 @@
+import {useParams} from "react-router-dom"
+
 function Intro(){
-    return (<div> Intro COmponent</div>)
+    const {name, id} = useParams()
+    return (<div> Intro COmponent -- {name} -- {id}</div>)
 }
 
 export default Intro;

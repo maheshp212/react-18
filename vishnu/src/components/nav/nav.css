@@ -14,3 +14,8 @@ nav {
     background-color:#79155B ;
     border-radius: 5px;
   }
+
+  nav .active{
+    background-color:#79155B ;
+    border-radius: 5px;
+  }
