@@ -8,6 +8,7 @@ import Notfound from "../notfound/notfound"
 import Expenses from "../expenses/expenses"
 import Apis from "../apis/apis"
 import Dynamic from "../dynamic/dynamic"
+import ContextProvider from "../context-provider/context-provider"
 function Main(){
 
     return (<main>
@@ -18,6 +19,7 @@ function Main(){
             <Route path="var" element={<Var/>} />
             <Route path="expenses" element={<Expenses/>} />
             <Route path="apis" element={<Apis/>} />
+            <Route path="context" element={<ContextProvider/>} />
             <Route path="*" element={<Notfound/>} />
         </Routes>
     </main>)

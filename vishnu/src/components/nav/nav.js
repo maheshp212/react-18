@@ -20,6 +20,7 @@ function Nav(){
         <div><NavLink activeClassName="active" to="/expenses"> Expenses </NavLink></div>
         <div><NavLink activeClassName="active" to="/apis"> API's </NavLink></div>
         <div><NavLink activeClassName="active" to="/vishnu"> Vishnu </NavLink></div>
+        <div><NavLink activeClassName="active" to="/context"> Context </NavLink></div>
       </nav>)
 
 }
