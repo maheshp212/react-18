@@ -1,11 +1,10 @@
+import { Link } from 'react-router-dom'
 import './nav.css'
 function Nav(){
     return (<nav>
-    <div><a href='#'> Home </a></div>
-    <div><a href='#'> About </a></div>
-    <div><a href='#'> Contact </a></div>
-    <div><a href='#'> Projects </a></div>
-    <div><a href='#'> Adress </a></div>
+    <div><Link to="/home"> Home </Link></div>
+    <div><Link to="/intro"> Intro </Link></div>
+    <div><Link to="/var"> Var </Link></div>
 </nav>)
 }
 
