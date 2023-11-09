@@ -1,0 +1,12 @@
+.expense-item{
+    display: flex;
+}
+.expense-item-name{
+    width: 50%;
+}
+.expense-item-date{
+    width: 30%;
+}
+.expense-item-amount{
+    width: 20%;
+}
