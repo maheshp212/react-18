@@ -1,3 +1,4 @@
+import ExpensesList from "./expenses-list/expenses-list";
 import "./expenses.css"
 function Expenses(){
     const expenses = [
@@ -11,13 +12,17 @@ function Expenses(){
     ]
     return <div> this is expenses
 
-        {expenses.map((expense)=>{
+        <ExpensesList 
+            expenses={expenses}
+            name={"satya"}/>
+
+        {/* {expenses.map((expense)=>{
             return (<div className="expense-item">
             <div className="expense-item-name">{expense.name}</div>
             <div className="expense-item-date">{expense.date}</div>
             <div className="expense-item-amount">$ {expense.amount}</div>
         </div>)
-        })}
+        })} */}
 
         {/* <div className="expense-item">
             <div className="expense-item-name">{expenses[0].name}</div>
