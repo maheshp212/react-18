@@ -1,0 +1,10 @@
+.header{
+    background-color: #A1CCD1;
+  }
+  .header h1{
+    margin: 0;
+    padding: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #0a4136;
+  }
