@@ -1,0 +1,20 @@
+.expense-item{
+    display: flex;
+    border-bottom:2px solid;
+    padding: 10px;
+    text-align: left;
+}
+.header{
+    font-weight: bold;
+    font-size: 16px;
+}
+.expense-name{
+width: 60%;
+
+}
+.expense-date{
+    width: 20%;
+}
+.expense-amount{
+    width: 20%;
+}
