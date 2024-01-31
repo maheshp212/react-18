@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Expenses.css";
 import ExpenseList from "./expense-list/ExpenseList";
 import NewExpense from "./new-expense/NewExpense";
@@ -11,12 +12,39 @@ const Expenses = () => {
     { date: "2022-09-12", name: "Groceries", amount: 500 },
     { date: "2022-07-12", name: "Fridge", amount: 45500 },
   ];
+  const [expenses, setExpenses] = useState(data);
+  
+  const createExpense = (expense) =>{
+    // console.log('createExpense invoked');
+    // console.log(expense);
+    // data.push(expense);
+    // console.log(data);
+
+    setExpenses((preVal) => [...preVal, expense]);
+
+    // [...preVal, expense]    what is it doing -- push
+
+    //(preVal) => [...preVal, expense] 
+        // -- what is it doing
+        // -- what type of function is this ??
+        // -- what type of fuction is this WRT setExpenses
+        // -- is this function returning anything
+        // -- if it is returning what it is returning.
+        // -- for return we need `return` keyword?
+        // -- for fuction we need `{}` , why are they missing
+  }
   return (
     <div>
-        <NewExpense/>
-        <ExpenseList expenses={data} name="psss" age="23"/>
+        <NewExpense  addExepense={createExpense}/>
+        <ExpenseList expenses={expenses} name="psss" age="23"/>
 
 
+{/* 
+
+parent to child -- any data type (Expenses -> ExpenseList)
+child to parent -- always a function (NewExpense -> Expenses)
+
+*/}
 
 
 
