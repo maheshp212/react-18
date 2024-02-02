@@ -1,0 +1,24 @@
+.user-details{
+    display: flex;
+    gap:30px;
+    padding:10px 0;
+    border-bottom: 2px gray solid;
+}
+.user-id{
+    width: 100px;
+}
+.user-name{
+    width: 150px;
+}
+.user-email{
+    width: 400px;
+}
+.user-gender{
+    width: 150px;
+}
+.user-status{
+    width: 150px;
+}
+.user-actions{
+    width: 400px;
+}
