@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Expenses.css";
 import ExpenseList from "./expense-list/ExpenseList";
 import NewExpense from "./new-expense/NewExpense";
+import Expensefilter from "./expense-filter/Expensefilter";
 
 const Expenses = () => {
   let data = [
@@ -13,6 +14,7 @@ const Expenses = () => {
     { date: "2022-07-12", name: "Fridge", amount: 45500 },
   ];
   const [expenses, setExpenses] = useState(data);
+  const [filteredExpenses, setFilteredExpenses] = useState(data);
   
   const createExpense = (expense) =>{
     // console.log('createExpense invoked');
@@ -20,23 +22,60 @@ const Expenses = () => {
     // data.push(expense);
     // console.log(data);
 
-    setExpenses((preVal) => [...preVal, expense]);
+    setExpenses((preVal) => [...preVal, expense]); // full list
+    
+    
+    // setExpenses((preVal) => {
+    //   return [...preVal, expense]
+    // }); 
+    
+        //(preVal) => [...preVal, expense] 
+        // -- what is it doing -- value set chestundi (how)
+        // -- what type of function is this ?? (arrow function)
+        // -- what type of fuction is this WRT setExpenses (callback function)
+        // -- is this function returning anything ; (yes it is returning the array of objects)
+        // -- if it is returning what it is returning.
+        // -- for return we need `return` keyword? (yes becuase it is having only one line {} & return keyword are not required)
+        // -- for fuction we need `{}` , why are they missing
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    setFilteredExpenses((preVal) => [...preVal, expense]); // filtered list
 
     // [...preVal, expense]    what is it doing -- push
 
-    //(preVal) => [...preVal, expense] 
-        // -- what is it doing
-        // -- what type of function is this ??
-        // -- what type of fuction is this WRT setExpenses
-        // -- is this function returning anything
-        // -- if it is returning what it is returning.
-        // -- for return we need `return` keyword?
-        // -- for fuction we need `{}` , why are they missing
+
+  }
+
+  const filterExpenses = (year) =>{
+    if(year === 'all'){
+      setFilteredExpenses(expenses);
+    } else {
+      let list = expenses.filter(expenseObj => {
+        let date = new Date(expenseObj.date);
+
+        return (date.getFullYear().toString() === year);
+      });
+      setFilteredExpenses(list);
+    }
+  }
+  const filterName = (name) =>{
+    let list = expenses.filter(expenseObj => {
+      return (expenseObj.name.toLowerCase().includes(name.toLowerCase()));
+    });
+    setFilteredExpenses(list);
   }
   return (
     <div>
         <NewExpense  addExepense={createExpense}/>
-        <ExpenseList expenses={expenses} name="psss" age="23"/>
+        <Expensefilter onChangeFilter={filterExpenses} filterName={filterName} />
+        <ExpenseList expenses={filteredExpenses} name="psss" age="23"/>
 
 
 {/* 
