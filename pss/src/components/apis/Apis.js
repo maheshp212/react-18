@@ -11,7 +11,12 @@ const Apis = () =>{
 
     const getUsers = ()=>{
         let url = 'https://gorest.co.in/public/v2/users';
-        fetch(url)
+        let headers = {
+            headers: {
+                "Authorization": "Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce"
+            }
+        }
+        fetch(url, headers)
         .then(data => data.json())
         .then(resp =>{
             console.log(resp);
@@ -26,6 +31,64 @@ const Apis = () =>{
             setUserInfo(resp);
         });
 
+    }
+    const createUser = () =>{
+        let url = 'https://gorest.co.in/public/v2/users';
+        let body = {
+            name: 'pss3',
+            email: 'pss3@gmail.com',
+            gender: 'female',
+            status: 'active'
+        }
+        let headers = {
+            headers: {
+                "Authorization": "Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce"
+            }
+        }
+        axios.post(url, body, headers)
+        .then(resp =>{
+            console.log(resp);
+            setUserInfo(resp);
+            // after create success call
+            getUsers();
+        });
+    } 
+    const editUser = (id) =>{
+        let url = 'https://gorest.co.in/public/v2/users/' +id;
+        let body = {
+            name: 'pss5 edit',
+            email: 'pss5eidt@gmail.com',
+            gender: 'female',
+            status: 'active'
+        }
+        let headers = {
+            headers: {
+                "Authorization": "Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce"
+            }
+        }
+        axios.put(url, body, headers)
+        .then(resp =>{
+            console.log(resp);
+            setUserInfo(resp);
+            // after create success call
+            getUsers();
+        });
+    }
+    const deleteUser = (id) =>{
+        let url = 'https://gorest.co.in/public/v2/users/' +id;
+       
+        let headers = {
+            headers: {
+                "Authorization": "Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce"
+            }
+        }
+        axios.delete(url, headers)
+        .then(resp =>{
+            console.log(resp);
+            setUserInfo(resp);
+            // after create success call
+            getUsers();
+        });
     }
     return <div>
         <div className="user-details header">
@@ -44,12 +107,15 @@ const Apis = () =>{
             <div className="user-gender">{user.gender}</div>
             <div className="user-status">{user.status}</div>
             <div className="user-status"> 
-                <div>Edit</div>
+                <div onClick={() => editUser(user.id)}>Edit</div>
                 <p onClick={() => viewUser(user.id)}>View</p>
-                <span>Delete</span>
+                <span onClick={() => deleteUser(user.id)}>Delete</span>
             </div>
         </div>
         })}
+
+<br/><br/>
+        <button onClick={createUser}>Create User </button> <br/><br/>
         {JSON.stringify(userInfo)}
 
         json string -> js Obj  [JSON.parse()]
