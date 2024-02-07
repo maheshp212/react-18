@@ -118,8 +118,8 @@ const Apis = () =>{
         <button onClick={createUser}>Create User </button> <br/><br/>
         {JSON.stringify(userInfo)}
 
-        json string -> js Obj  [JSON.parse()]
-        js Obj -> json string [JSON.stringify ()]
+        {/* json string -> js Obj  [JSON.parse()] */}
+        {/* js Obj -> json string [JSON.stringify ()] */}
     </div>
 }
 export default Apis;

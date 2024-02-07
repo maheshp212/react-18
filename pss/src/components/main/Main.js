@@ -5,6 +5,7 @@ import Intro from "../intro/Intro";
 import Var from "../var/Var";
 import Expenses from "../expenses/Expenses";
 import Apis from "../apis/Apis";
+import ContextProvider from "../context-provider/ContextProvider";
 
 const Main = () =>{
 
@@ -15,6 +16,7 @@ const Main = () =>{
       <Route path="/variablesss" element={<Var/>}/>
       <Route path="/expenses" element={<Expenses/>}/>
       <Route path="/apis" element={<Apis/>}/>
+      <Route path="/context" element={<ContextProvider/>}/>
     </Routes>
   </main>
 }
