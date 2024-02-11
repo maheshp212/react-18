@@ -7,6 +7,7 @@ import Expenses from "../expenses/Expenses";
 import Apis from "../apis/Apis";
 import ContextProvider from "../context-provider/ContextProvider";
 import Bootstrap from "../bootstrap/bootstrap";
+import Redux from "../redux/redux";
 
 const Main = () =>{
 
@@ -19,6 +20,7 @@ const Main = () =>{
       <Route path="/apis" element={<Apis/>}/>
       <Route path="/context" element={<ContextProvider/>}/>
       <Route path="/boot" element={<Bootstrap/>}/>
+      <Route path="/redux" element={<Redux/>}/>
     </Routes>
   </main>
 }
