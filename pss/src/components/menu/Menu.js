@@ -9,6 +9,7 @@ const Menu = () =>{
     <div><Link to="/expenses"> Expenses </Link></div>
     <div><Link to="/apis"> Api's </Link></div>
     <div><Link to="/context"> Context </Link></div>
+    <div><Link to="/boot"> bootstrap </Link></div>
   </nav>
 }
 
