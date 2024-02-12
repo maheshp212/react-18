@@ -8,12 +8,13 @@ import Apis from "../apis/Apis";
 import ContextProvider from "../context-provider/ContextProvider";
 import Bootstrap from "../bootstrap/bootstrap";
 import Redux from "../redux/redux";
+import NotFound from "../notfound/NotFound";
 
 const Main = () =>{
 
     return <main>
     <Routes>
-      <Route path="/home" element={<Home/>}/>
+      <Route path="/" element={<Home/>}/>
       <Route path="/intro" element={<Intro/>}/>
       <Route path="/variablesss" element={<Var/>}/>
       <Route path="/expenses" element={<Expenses/>}/>
@@ -21,6 +22,7 @@ const Main = () =>{
       <Route path="/context" element={<ContextProvider/>}/>
       <Route path="/boot" element={<Bootstrap/>}/>
       <Route path="/redux" element={<Redux/>}/>
+      <Route path="*" element={<NotFound/>}/>
     </Routes>
   </main>
 }

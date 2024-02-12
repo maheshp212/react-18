@@ -12,9 +12,10 @@ nav{
     font-weight: bold;
     font-style: italic;
   }
-  nav a:hover{
+  nav a:hover, .active{
     background-color: #A1CCD1;
     text-decoration: underline;
     border-radius: 10px;
     font-size: 16px;
   }
+  

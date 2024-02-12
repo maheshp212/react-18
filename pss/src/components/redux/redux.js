@@ -18,7 +18,7 @@ const Redux = () =>{
 
         {/* Redux Life Cycle Image */}
         {/* https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif */}
-
+    
         {/* to fetch the data from store 
         strore -> veiw -> useSelector
 
