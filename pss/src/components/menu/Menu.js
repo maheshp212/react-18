@@ -12,7 +12,6 @@ const Menu = () =>{
     <div><Link to="/boot"> bootstrap </Link></div>
     <div><Link to="/redux"> Redux </Link></div> */}
 
-
     <div><NavLink activeClassName="active" to="/">Home</NavLink></div>
     <div><NavLink activeClassName="active" to="/intro"> Intro </NavLink></div>
     <div><NavLink activeClassName="active" to="/variablesss"> Var </NavLink></div>
@@ -22,6 +21,9 @@ const Menu = () =>{
     <div><NavLink activeClassName="active" to="/boot"> bootstrap </NavLink></div>
     <div><NavLink activeClassName="active" to="/redux"> Redux </NavLink></div>
     <div><NavLink activeClassName="active" to="/pranathi"> Pranathi </NavLink></div>
+    <div><NavLink activeClassName="active" to="/ref"> Ref </NavLink></div>
+    <div><NavLink activeClassName="active" to="/memo"> Memo </NavLink></div>
+    <div><NavLink activeClassName="active" to="/reducer"> Reducer </NavLink></div>
 
   </nav>
 }

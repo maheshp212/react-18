@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Apis.css";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 const Apis = () =>{
     const [users, setUsers] = useState([]);
@@ -110,6 +111,9 @@ const Apis = () =>{
                 <div onClick={() => editUser(user.id)}>Edit</div>
                 <p onClick={() => viewUser(user.id)}>View</p>
                 <span onClick={() => deleteUser(user.id)}>Delete</span>
+                <NavLink  to={`/user/${user.id}`}>View Link</NavLink>
+                <NavLink  to={"/user/" +user.id}>View Link</NavLink>
+
             </div>
         </div>
         })}
