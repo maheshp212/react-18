@@ -1,21 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Main from "./components/main/Main";
+import Header from "./components/header/Header";
+import Menu from "./components/menu/Menu";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
-      <header>
-        <h1>Chetan Training</h1>
-      </header>
-      <nav>
-        <div> <a href='#'>Home</a></div>
-        <div> <a href='#'>Intro</a></div>
-        <div> <a href='#'>Var</a></div>
-      </nav>
-      <main>
-        gthis is contnet
-      </main>
-      <footer>  &copy; 2025 ; </footer>
+      <Header />
+      <Menu />
+      <Main />
+      <Footer />
     </>
   );
 }
