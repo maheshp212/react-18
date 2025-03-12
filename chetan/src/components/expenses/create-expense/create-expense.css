@@ -1,0 +1,30 @@
+.create-expnese{
+    background-color: rgb(14, 56, 100);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    display: float;
+    margin: 0 auto;
+}
+.form{
+
+}
+.form-item{
+    padding: 10px;
+    text-align: center;
+}
+input, button{
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+}
+button{
+    background-color: rgb(41, 97, 157);;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(17, 122, 235);;
+}

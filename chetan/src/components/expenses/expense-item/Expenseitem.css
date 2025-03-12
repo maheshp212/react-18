@@ -1,0 +1,21 @@
+.expense{
+    display: flex;
+    padding: 5px;
+    background-color: rgb(2, 84, 56);
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+.date{
+    width: 20%;
+}
+.name{
+    width: 60%;
+}
+.amount{
+    background-color: rgb(12, 156, 108);
+    width: 20%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
