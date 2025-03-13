@@ -1,0 +1,22 @@
+.user{
+    display: flex;
+
+}
+.headers{
+    font-weight: bold;
+}
+.id{
+    width: 15%;
+}
+.name{
+    width: 30%;
+}
+.email{
+    width: 30%;
+}
+.gender{
+    width: 10%;
+}
+.actions{
+    width: 15%;
+}
