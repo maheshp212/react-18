@@ -10,11 +10,12 @@ function Apis() {
     getUsers();
   }, []);
 
+  //JWT - JSON Web Token
   let headers = {
     headers : {
         'Authorization' : 'Bearer 8ac8b6b544cf0cb6658d10d29b4f08e1f99113d711318b21e7e05b0444b920ce'
     }
-}
+  }
 
   const getUsers = () => {
     
