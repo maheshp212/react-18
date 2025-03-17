@@ -25,8 +25,8 @@ function CreateExpense(props){
            <div className="form-item"> <input type="text" placeholder="name" value={name} onChange={nameHandler}/> </div> {name}
            <div className="form-item"> <input type="number" placeholder="Amount" value={amount} onChange={(e) => {setAmount(e.target.value)}}/> </div> {amount}
            <div className="form-item"> <input type="date" value={date} onChange={(event) => {setDate(event.target.value)}} /> </div>{date}
-           <div className="form-item"> <button onClick={create}> Create</button> </div>
-           <div className="form-item"> <button onClick={clear}> Clear</button> </div>
+           <div className="form-item"> <button className="button" onClick={create}> Create</button> </div>
+           <div className="form-item"> <button className="button" onClick={clear}> Clear</button> </div>
            </div> 
     </div>
 }

@@ -14,17 +14,17 @@
     padding: 10px;
     text-align: center;
 }
-input, button{
+input, .button{
     width: 80%;
     font-size: 16px;
     padding: 10px;
 }
-button{
+.button{
     background-color: rgb(41, 97, 157);;
     border: none;
     color: white;
     font-weight: bold;
 }
-button:hover{
+.button:hover{
     background-color: rgb(17, 122, 235);;
 }

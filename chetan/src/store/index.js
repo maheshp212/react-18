@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let initalState = {
     counter : 0
