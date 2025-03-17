@@ -15,7 +15,10 @@ function Menu(){
         <div> <Link to="/buy-used-cars/hyderabad/maruti-suzuki/wagon-r-12/vxi-amt-uppal-2019/19477039">Car 2</Link></div>
         <div> <Link to="/chetan">Chetan</Link></div>
         <div> <Link to="/context">Context</Link></div>
+        <div> <Link to="/redux">Redux</Link></div>
+        <div> <Link to="/memo">Memo</Link></div>
+        <div> <Link to="/reducer">Reducer</Link></div>
+        <div> <Link to="/ref">Ref</Link></div>
       </nav>)
 }
-
 export default Menu

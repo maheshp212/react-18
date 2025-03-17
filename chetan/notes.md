@@ -64,3 +64,17 @@ post man
         - some one will do the configuration & everythign will be completed
         - you need to understand the architecture of SSO login
         - start picking up these tasks once you are familiar with your project
+
+
+
+// React Hooks 
+//  - UseState  - to hold a variable value & when ever it changes, the view will get re-render
+//  - useEffect - it will invoke automatically on the page load, or when ever a varibale value changes
+//  - useContext - share the variable value with all its sub children components
+//  - useParams - to get the dynamic URL Parmeters
+
+
+
+// Redux
+// useSelector
+// UseDispatch
